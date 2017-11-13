@@ -9,10 +9,10 @@ class clock{
   void render(){
     
   int radius = min(width, height) / 2;
-  secondsRadius = radius * 0.72;
-  minutesRadius = radius * 0.60;
-  hoursRadius = radius * 0.50;
-  clockDiameter = radius * 1.8;
+  secondsRadius = radius * 0.22;
+  minutesRadius = radius * 0.20;
+  hoursRadius = radius * 0.01;
+  clockDiameter = radius * .47;
   
   cx = width / 2;
   cy = height / 2;
@@ -21,7 +21,7 @@ class clock{
   
   void update(){
    // Draw the clock background
-  fill(80);
+  fill(255);
   noStroke();
   ellipse(cx, cy, clockDiameter, clockDiameter);
   
@@ -32,13 +32,13 @@ class clock{
   float h = map(hour() + norm(minute(), 0, 60), 0, 24, 0, TWO_PI * 2) - HALF_PI;
   
   // Draw the hands of the clock
-  stroke(255);
+  stroke(0);
   strokeWeight(1);
-  line(cx, cy, cx + cos(s) * secondsRadius, cy + sin(s) * secondsRadius);
+  line(cx, cy, cx + cos(s) * secondsRadius, cy+ sin(s) * secondsRadius);
   strokeWeight(2);
-  line(cx, cy, cx + cos(m) * minutesRadius, cy + sin(m) * minutesRadius);
+  line(cx, cy, cx + cos(m) * minutesRadius+60, cy + sin(m) * minutesRadius+60);
   strokeWeight(4);
-  line(cx, cy, cx + cos(h) * hoursRadius, cy + sin(h) * hoursRadius);
+  line(cx, cy, cx + cos(h) * hoursRadius + 40, cy + sin(h) * hoursRadius+ 40);
   
   // Draw the minute ticks
   strokeWeight(2);
