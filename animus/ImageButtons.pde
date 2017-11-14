@@ -12,7 +12,7 @@ class ImageButtons extends Button
 
 
 
-  ImageButtons(int ix, int iy, int iw, int ih, PImage ibase, PImage iroll, PImage idown) 
+  ImageButtons(int ix, int iy, int iw, int ih, PImage ibase) 
 
   {
 
@@ -25,10 +25,6 @@ class ImageButtons extends Button
     h = ih;
 
     base = ibase;
-
-    roll = iroll;
-
-    down = idown;
 
     currentimage = base;
 
@@ -46,11 +42,11 @@ class ImageButtons extends Button
 
     if(pressed) {
 
-      currentimage = down;
+      link("https://dropbox.com");
 
     } else if (over){
 
-      currentimage = roll;
+      currentimage = base;
 
     } else {
 
@@ -83,9 +79,7 @@ class ImageButtons extends Button
   void display() 
 
   {
-
     image(currentimage, x, y);
-
   }
 
 }

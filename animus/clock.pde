@@ -36,9 +36,9 @@ class clock{
   strokeWeight(1);
   line(cx, cy, cx + cos(s) * secondsRadius, cy+ sin(s) * secondsRadius);
   strokeWeight(2);
-  line(cx, cy, cx + cos(m) * minutesRadius+60, cy + sin(m) * minutesRadius+60);
+  line(cx, cy, cx + cos(m) * minutesRadius+10, cy + sin(m) * minutesRadius+10);
   strokeWeight(4);
-  line(cx, cy, cx + cos(h) * hoursRadius + 40, cy + sin(h) * hoursRadius+ 40);
+  line(cx, cy, cx + cos(h) * hoursRadius + 25, cy + sin(h) * hoursRadius+ 25);
   
   // Draw the minute ticks
   strokeWeight(2);
