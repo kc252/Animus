@@ -31,7 +31,7 @@ void draw()
   c.update(); 
   button.update();
   button.display();
-  filter(BLUR, 0.7);
+  //filter(BLUR, 0.7);
   frameRate(60);
   
   
