@@ -19,7 +19,7 @@ class Button
   void pressed() {
 
     if(over && mousePressed) {
-
+      
       pressed = true;
 
     } else {
