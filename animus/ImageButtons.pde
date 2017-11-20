@@ -9,6 +9,8 @@ class ImageButtons extends Button
   PImage down;
 
   PImage currentimage;
+  
+   
 
 
 
@@ -32,9 +34,11 @@ class ImageButtons extends Button
 
   
 
-  void update() 
+  boolean update() 
 
   {
+    
+    boolean ispressed = false;
 
     over();
 
@@ -42,23 +46,16 @@ class ImageButtons extends Button
 
     if(pressed) {
 
-<<<<<<< HEAD
-      
+    ispressed = true;
     
-    }else {
-=======
-      link("https://dropbox.com");
-
-    } else if (over){
-
-      currentimage = base;
-
     } else {
->>>>>>> cb7b4918ba8d58e08f443ed2ce452e00ce3c982c
 
+      ispressed = false;
       currentimage = base;
 
     }
+    
+    return ispressed;
 
   }
 

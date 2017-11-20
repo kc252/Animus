@@ -7,8 +7,8 @@ float clockDiameter;
 class clock{
   
   void render(){
-    
-  int radius = min(width, height) / 2;
+   
+    int radius = min(width, height) / 2;
   secondsRadius = radius * 0.22;
   minutesRadius = radius * 0.20;
   hoursRadius = radius * 0.01;
@@ -21,7 +21,7 @@ class clock{
   
   void update(){
    // Draw the clock background
-  fill(255);
+  fill(255,191);
   noStroke();
   ellipse(cx, cy, clockDiameter, clockDiameter);
   
