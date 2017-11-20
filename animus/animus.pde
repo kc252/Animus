@@ -19,42 +19,32 @@ PFont font;
 void setup()
 {
   img = loadImage("abstergo.png");
-  img.resize(100,100);
-
-  size(800, 800);
+  img.resize(150,150);
+  fullScreen();
   backg.render(p);
   stroke(255);
   c.render();
   
   PImage b = loadImage("dropbox.png");
-  b.resize(60,60);
-
+  
   PImage b1 = loadImage("facebook.png");
-  b1.resize(60,60);
   
   PImage b2 = loadImage("google+.png");
-  b2.resize(50,60);
   
   PImage b3 = loadImage("instagram.png");
-  b3.resize(60,50);
+  b3.resize(130,110);
   
   PImage b4 = loadImage("linkedin.png");
-  b4.resize(50,50);
   
   PImage b5 = loadImage("twitter.png");
-  b5.resize(60,60);
   
   PImage b6 = loadImage("skype.png");
-  b6.resize(60,60);
   
   PImage b7 = loadImage("snapchat.png");
-  b7.resize(60,60);
   
   PImage b8 = loadImage("youtube.png");
-  b8.resize(60,60);
   
   PImage b9 = loadImage("whatsapp.png");
-  b9.resize(60,60);
  
   
   int x = width - b.width;
@@ -63,16 +53,16 @@ void setup()
   int h = b.height;
 
   
-  button = new ImageButtons(x, y, w, h, b);
-  button1 = new ImageButtons(x - b.width, y, w, h, b1);
-  button2= new ImageButtons(x - b1.width*2+10, y, w, h, b2);
-  button3= new ImageButtons(x - b1.width*3+5, y+10, w, h, b3);
-  button4= new ImageButtons(x - b1.width*4+10, y+10, w, h, b4);
-  button5= new ImageButtons(x - b1.width*5-200, y+5, w, h, b5);
-  button6= new ImageButtons(x - b1.width*6-200+5, y+3, w, h, b6);
-  button7= new ImageButtons(x - b1.width*7-200, y+7, w, h, b7);
-  button8= new ImageButtons(x - b1.width*8-200,y+2, w, h, b8);
-  button9= new ImageButtons(x - b1.width*9-200, y+5, w, h, b9);
+  button = new ImageButtons(x - b.width*0.5, y, w, h, b);
+  button1 = new ImageButtons(x - b.width*1.5, y, w, h, b1);
+  button2= new ImageButtons(x - b1.width*2.5, y, w, h, b2);
+  button3= new ImageButtons(x - b1.width*3.5, y, w, h, b3);
+  button4= new ImageButtons(x - b1.width*4.5, y, w, h, b4);
+  button5= new ImageButtons(x - b1.width*9, y, w, h, b5);
+  button6= new ImageButtons(x - b1.width*10, y, w, h, b6);
+  button7= new ImageButtons(x - b1.width*11, y, w, h, b7);
+  button8= new ImageButtons(x - b1.width*12,y, w, h, b8);
+  button9= new ImageButtons(x - b1.width*13, y, w, h, b9);
   
   
 }
@@ -80,6 +70,7 @@ void setup()
 void draw()
 {
   
+  frameRate(60);
   background(255);
   backg.update(p);
   c.update(); 
@@ -94,19 +85,19 @@ void draw()
   button8.display();
   button9.display();
   
-  image(img, 270, 100);
+  image(img, width/2.5, height/12);
   font = createFont("ac3_abstergosans_lite_by_jmchoppergunnernl-d6e089c.ttf", 48);
-  textFont(font, 56);
+  textFont(font, 86);
   fill(0);
-  text("Abstergo", 360, 145);
-  textSize(44);
-  text("Industries" , 375 , 185);
-  textSize(16);
-  text("\"We change the world. Every day, in a hundred different ways\"", 235, 230);
-  textSize(20);
-  text("YEAR  " + year() + "   MONTH  " + month() + "   DAY  " + day() , 290, 20) ;
+  text("Abstergo", width/2.1, height/7);
+  textSize(54);
+  text("Industries" , width/2 , height/5.3);
+  textSize(24);
+  text("\"We change the world. Every day, in a hundred different ways\"", width/2.75, height/3.9);
+  textSize(32);
+  text("YEAR  " + year() + "   MONTH  " + month() + "   DAY  " + day() , width/2.5, height/30) ;
  
-  frameRate(60);
+  
   
   
 }

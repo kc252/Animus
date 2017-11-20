@@ -2,9 +2,9 @@ class Button
 
 {
 
-  int x, y;
+  float x, y;
 
-  int w, h;
+  float w, h;
 
   color basecolor, highlightcolor;
 
@@ -32,7 +32,7 @@ class Button
 
   
 
-  boolean overRect(int x, int y, int width, int height) {
+  boolean overRect(float x, float y, float width, float height) {
 
   if (mouseX >= x && mouseX <= x+width && 
 

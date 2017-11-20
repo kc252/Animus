@@ -14,7 +14,7 @@ class ImageButtons extends Button
 
 
 
-  ImageButtons(int ix, int iy, int iw, int ih, PImage ibase) 
+  ImageButtons(float ix, float iy, float iw, float ih, PImage ibase) 
 
   {
 
@@ -65,7 +65,7 @@ class ImageButtons extends Button
 
   {
 
-    if( overRect(x, y, w, h) ) {
+    if(overRect(x, y, w, h) ) {
 
       over = true;
 
