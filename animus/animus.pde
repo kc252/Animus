@@ -1,3 +1,10 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
 Particle[] p = new Particle  [100];
 background backg = new background();
 clock c = new clock();
@@ -15,6 +22,11 @@ ArrayList <ImageButtons> buttons = new ArrayList <ImageButtons>();
 PImage img;
 float spring = 0.0000001;
 PFont font;
+Minim minim;
+AudioPlayer song;
+
+boolean played = true;
+boolean start = true;
 
 void setup()
 {
@@ -56,15 +68,24 @@ void setup()
   
   button = new ImageButtons(x - b.width*0.5, y, w, h, b);
   button1 = new ImageButtons(x - b.width*1.5, y, w, h, b1);
-  button2= new ImageButtons(x - b1.width*2.5, y, w, h, b2);
+  button2= new ImageButtons(x - b1.width*2.4, y, w, h, b2);
   button3= new ImageButtons(x - b1.width*3.6, y+20, w, h, b3);
-  button4= new ImageButtons(x - b1.width*4.6, y, w, h, b4);
+  button4= new ImageButtons(x - b1.width*4.6, y+10, w, h, b4);
   button5= new ImageButtons(x - b1.width*9, y, w, h, b5);
-  button6= new ImageButtons(x - b1.width*10, y, w, h, b6);
-  button7= new ImageButtons(x - b1.width*11, y, w, h, b7);
+  button6= new ImageButtons(x - b1.width*9.9, y, w, h, b6);
+  button7= new ImageButtons(x - b1.width*11, y+5, w, h, b7);
   button8= new ImageButtons(x - b1.width*12,y, w, h, b8);
   button9= new ImageButtons(x - b1.width*13, y, w, h, b9);
   
+  if(start){
+    
+  minim = new Minim(this);
+  song = minim.loadFile("startup.mp3");
+  song.play();
+  start = false;
+  played = false;
+  
+  }
   
 }
 
@@ -98,7 +119,12 @@ void draw()
   textSize(32);
   text("YEAR  " + year() + "   MONTH  " + month() + "   DAY  " + day() , width/2.5, height/30) ;
  
-  
+  if(!played){
+     song = minim.loadFile("ambient.mp3");
+     song.play(); 
+     song.loop();
+     played = true; 
+  }
   
   
 }
