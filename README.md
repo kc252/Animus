@@ -1,12 +1,14 @@
 # Aniumus
 
-2nd Year Scifi Coding UI
+**2nd Year Scifi UI**
 
 Module: Object Oriented Programming
+
 Name: Kevin Campbell
+
 Student No.: D17126544
 
-Instrutions for Use: 
+**Instrutions for Use:** 
 
 Pretty simple to use, all the buttons are functional and will open the websites shown in the icon 
 as well as the date and time being taken from the systems current date and time.

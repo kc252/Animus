@@ -26,15 +26,16 @@ void setup()
   c.render();
   
   PImage b = loadImage("dropbox.png");
-  
+ 
   PImage b1 = loadImage("facebook.png");
   
   PImage b2 = loadImage("google+.png");
   
   PImage b3 = loadImage("instagram.png");
-  b3.resize(130,110);
+  b3.resize(150,100);
   
   PImage b4 = loadImage("linkedin.png");
+  b4.resize(125,125);
   
   PImage b5 = loadImage("twitter.png");
   
@@ -56,8 +57,8 @@ void setup()
   button = new ImageButtons(x - b.width*0.5, y, w, h, b);
   button1 = new ImageButtons(x - b.width*1.5, y, w, h, b1);
   button2= new ImageButtons(x - b1.width*2.5, y, w, h, b2);
-  button3= new ImageButtons(x - b1.width*3.5, y, w, h, b3);
-  button4= new ImageButtons(x - b1.width*4.5, y, w, h, b4);
+  button3= new ImageButtons(x - b1.width*3.6, y+20, w, h, b3);
+  button4= new ImageButtons(x - b1.width*4.6, y, w, h, b4);
   button5= new ImageButtons(x - b1.width*9, y, w, h, b5);
   button6= new ImageButtons(x - b1.width*10, y, w, h, b6);
   button7= new ImageButtons(x - b1.width*11, y, w, h, b7);
