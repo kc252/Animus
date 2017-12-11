@@ -18,6 +18,7 @@ ImageButtons button6;
 ImageButtons button7;
 ImageButtons button8;
 ImageButtons button9;
+ImageButtons Abstergo_b;
 ArrayList <ImageButtons> buttons = new ArrayList <ImageButtons>();
 PImage img;
 float spring = 0.0000001;
@@ -30,8 +31,7 @@ boolean start = true;
 
 void setup()
 {
-  img = loadImage("abstergo.png");
-  img.resize(150,150);
+  
   fullScreen();
   backg.render(p);
   stroke(255);
@@ -65,6 +65,9 @@ void setup()
   int w = b.width;
   int h = b.height;
 
+  PImage img = loadImage("abstergo.png");
+  Abstergo_b = new ImageButtons (x - b.width*7.7, y-385, w, h, img);
+  img.resize(150,150);
   
   button = new ImageButtons(x - b.width*0.5, y, w, h, b);
   button1 = new ImageButtons(x - b.width*1.5, y, w, h, b1);
@@ -74,7 +77,7 @@ void setup()
   button5= new ImageButtons(x - b1.width*9, y, w, h, b5);
   button6= new ImageButtons(x - b1.width*9.9, y, w, h, b6);
   button7= new ImageButtons(x - b1.width*11, y+5, w, h, b7);
-  button8= new ImageButtons(x - b1.width*12,y, w, h, b8);
+  button8= new ImageButtons(x - b1.width*12,y, w, h, b8);  
   button9= new ImageButtons(x - b1.width*13, y, w, h, b9);
   
   if(start){
@@ -106,9 +109,9 @@ void draw()
   button7.display();
   button8.display();
   button9.display();
+  Abstergo_b.display();
   
-  image(img, width/2.5, height/12);
-  font = createFont("ac3_abstergosans_lite_by_jmchoppergunnernl-d6e089c.ttf", 48);
+  font = createFont("abstergo.ttf", 48);
   textFont(font, 86);
   fill(0);
   text("Abstergo", width/2.1, height/7);
@@ -141,6 +144,8 @@ void mousePressed(){
   else if(button7.update() == true){link("https://snapchat.com");}
   else if(button8.update() == true){link("https://youtube.com");}
   else if(button9.update() == true){link("https://whatsapp.com");}
-  
+  else if(Abstergo_b.update() == true){link("file:///C:/Users/KCAMPBE/Documents/College/OOP/Animus/animus/data/easteregg.html");}
   
 }
+  
+  
