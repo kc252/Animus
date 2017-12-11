@@ -121,6 +121,7 @@ void draw()
  
   if(!played){
      song = minim.loadFile("ambient.mp3");
+     song.setVolume(0.5);
      song.play(); 
      song.loop();
      played = true; 
