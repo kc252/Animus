@@ -25,40 +25,32 @@ float spring = 0.0000001;
 PFont font;
 Minim minim;
 AudioPlayer song;
+PGraphics canvas;
 
 boolean played = true;
 boolean start = true;
 
 void setup()
 {
-  
   fullScreen();
   backg.render(p);
   stroke(255);
   c.render();
   
+  //button images
   PImage b = loadImage("dropbox.png");
- 
   PImage b1 = loadImage("facebook.png");
-  
   PImage b2 = loadImage("google+.png");
-  
   PImage b3 = loadImage("instagram.png");
   b3.resize(150,100);
-  
   PImage b4 = loadImage("linkedin.png");
   b4.resize(125,125);
-  
-  PImage b5 = loadImage("twitter.png");
-  
-  PImage b6 = loadImage("skype.png");
-  
-  PImage b7 = loadImage("snapchat.png");
-  
+  PImage b5 = loadImage("twitter.png"); 
+  PImage b6 = loadImage("skype.png"); 
+  PImage b7 = loadImage("snapchat.png");  
   PImage b8 = loadImage("youtube.png");
-  
   PImage b9 = loadImage("whatsapp.png");
- 
+  
   
   int x = width - b.width;
   int y = height/2 - b.height/2; 
@@ -130,7 +122,6 @@ void draw()
      played = true; 
   }
   
-  
 }
 
 void mousePressed(){
@@ -147,5 +138,6 @@ void mousePressed(){
   else if(Abstergo_b.update() == true){link("file:///C:/Users/KCAMPBE/Documents/College/OOP/Animus/animus/data/easteregg.html");}
   
 }
+
   
   
